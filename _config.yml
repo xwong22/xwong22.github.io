@@ -5,7 +5,7 @@
 
 title: Xiangyu Wong
 description: >-
-  Researcher in artificial intelligence. Personal website, publications and blog.
+  Xiangyu Wong, personal website, publications and blog, researching large language models.
 url: "https://xwong22.github.io"   # your GitHub Pages domain, no trailing slash
 baseurl: ""                              # "" for username.github.io; "/repo-name" for a project site
 lang: en
@@ -52,7 +52,7 @@ news_limit: 8
 # =====================================================================
 
 permalink: /blog/:year/:title/
-timezone: America/New_York
+timezone: Asia/Shanghai
 
 markdown: kramdown
 highlighter: rouge
