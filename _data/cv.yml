@@ -1,0 +1,60 @@
+# Sections of the CV page, shown in this order. Add, remove or rename sections freely.
+# Every entry has `when` and `title`; `where` and `detail` are optional.
+# All text fields accept Markdown; quote text containing ": ".
+# A section with `publications: true` lists everything in _data/publications.yml.
+
+- title: Education
+  entries:
+    - when: 2025 – present
+      title: M.S. in Computer Science (Artificial Intelligence)
+      where: School of Computer Science, Peking University
+    - when: 2021 – 2025
+      title: B.S. in Big Data Management and Application
+      where: Yuanpei College, Peking University
+      detail: GPA 3.8/4.0, ranked 1st in major, outstanding graduate of my cohort
+
+- title: Research & Industry Experience
+  entries:
+    - when: 2026 – present
+      title: Research Engineer Intern
+      where: Tencent
+      detail: On-policy self-distillation; VLM post-training; small-to-large model handoff
+    - when: 2024 – 2025
+      title: Research Engineer Intern
+      where: GOZHI-AI (AI in education startup)
+      detail: Image retrieval for RAG; object detection; on-device inference optimization
+
+- title: Honors & Awards
+  entries:
+    - when: 2025
+      title: Chinese Government High-Level Postgraduate Full Scholarship
+      detail: Sole recipient in cohort, merit-based full scholarship for whole course of study
+    - when: 2025
+      title: Outstanding Graduate, Yuanpei College
+    - when: 2025
+      title: Academic Excellence Award for International Students
+    - when: 2024
+      title: Award for Academic Excellence; Peking University Third Prize
+    - when: 2023
+      title: Merit Student Award, Yuanpei College
+      detail: Only international recipient in nearly 10 years
+    - when: 2023
+      title: Fenjiu Group Scholarship
+    - when: 2022
+      title: Award for Academic Excellence; Peking University Second Prize
+    - when: 2021
+      title: Peking University Scholarship for International Students
+      detail: 1 of 8 recipients, merit-based full scholarship for whole course of study
+
+- title: Leadership
+  entries:
+    - when: 2022 – 2023
+      title: President
+      where: Malaysian Students' Association of Peking University
+
+- title: Skills
+  entries:
+    - when: Languages
+      title: English, Chinese, Malay
+    - when: Technical
+      title: Python, PyTorch, Linux, Git

@@ -1,0 +1,6 @@
+{%- comment -%}
+  An unnumbered note in the right margin (inline, tappable, on small screens).
+  Usage inside a paragraph:
+    Some text{% include marginnote.html text="A remark with **markdown** and $$x^2$$." %} more text.
+{%- endcomment -%}
+<span class="marginnote-wrap"><button type="button" class="marginnote-toggle" aria-label="Show margin note">&#8853;</button><span class="sidenote marginnote">{{ include.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span></span>

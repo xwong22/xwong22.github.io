@@ -1,0 +1,37 @@
+---
+title: Curriculum Vitae
+permalink: /cv/
+---
+
+<!-- Sections below are generated from _data/cv.yml. Set `cv_pdf` in _config.yml to show a download link. -->
+
+{%- if site.cv_pdf and site.cv_pdf != "" %}
+<p class="page-lead"><a class="button" href="{{ site.cv_pdf | relative_url }}">Download full CV (PDF)</a></p>
+{% endif %}
+
+{% for section in site.data.cv %}
+<section class="cv-section">
+  <h2>{{ section.title }}</h2>
+  {%- if section.publications %}
+  <ol class="pubs">
+    {%- for pub in site.data.publications %}
+    {% include publication.html pub=pub %}
+    {%- endfor %}
+  </ol>
+  {%- endif %}
+  {%- if section.entries %}
+  <ul class="cv-list">
+    {%- for e in section.entries %}
+    <li class="cv-entry">
+      <span class="cv-when">{{ e.when }}</span>
+      <div class="cv-what">
+        <div class="cv-title">{{ e.title | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
+        {%- if e.where %}<div class="cv-where">{{ e.where | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>{% endif %}
+        {%- if e.detail %}<div class="cv-detail">{{ e.detail | markdownify }}</div>{% endif %}
+      </div>
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+</section>
+{% endfor %}

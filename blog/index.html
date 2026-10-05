@@ -1,0 +1,21 @@
+---
+title: Blog
+permalink: /blog/
+---
+<p class="page-lead">
+  Notes on research and ideas. Subscribe via <a href="{{ '/feed.xml' | relative_url }}">RSS</a>.
+</p>
+
+{%- if site.posts.size == 0 %}
+<p class="muted">No posts yet.</p>
+{%- endif %}
+
+{%- assign by_year = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
+{%- for group in by_year %}
+<h2 class="year-heading">{{ group.name }}</h2>
+<ul class="post-list">
+  {%- for post in group.items %}
+  {% include post-item.html post=post %}
+  {%- endfor %}
+</ul>
+{%- endfor %}

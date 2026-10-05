@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>&copy; {{ site.time | date: "%Y" }} {{ site.author.name }}</span>
+    <span class="footer-links">
+      {%- if site.blog %}
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      <span class="sep">·</span>
+      {%- endif %}
+      <span>Last updated {{ site.time | date: "%B %Y" }}</span>
+    </span>
+  </div>
+</footer>

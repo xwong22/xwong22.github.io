@@ -1,0 +1,9 @@
+# News items for the home page, newest first. `text` supports Markdown links.
+# The home page shows the first `news_limit` items (set in _config.yml).
+# Wrap `text` in double quotes if it contains a colon followed by a space.
+
+- date: 2026-08-21
+  text: "Our paper *Semantic Distractor Robustness in LLMs: Exploring the Underlying Mechanisms* was accepted to EMNLP 2026!"
+
+- date: 2025-09-01
+  text: "Started my Master's in Computer Science at Peking University."

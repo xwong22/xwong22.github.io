@@ -1,0 +1,17 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
+Gemfile.lock
+.DS_Store
+
+# Private source files (e.g. CV with phone number) — never publish
+references/
+
+# Editor / OS clutter
+.vscode/
+.idea/
+*.swp
+Thumbs.db

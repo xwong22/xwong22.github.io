@@ -1,0 +1,81 @@
+# =====================================================================
+#  Publications — one entry per paper, newest first within a year.
+#  The publications page groups them by `year` automatically.
+#
+#  Fields (only title, authors, year are required):
+#    title:     Paper title
+#    authors:   List of names. Names matching `author.pub_names` in _config.yml
+#               are highlighted. Add * for equal contribution, e.g. "Your Name*".
+#    venue:     Full venue name (shown in italics)
+#    year:      2026
+#    note:      Optional highlight, e.g. "Oral", "Spotlight", "Best Paper Award"
+#    selected:  true  -> also shown on the home page
+#    links:     Any label -> URL pairs, shown in this order. The first one is
+#               also used as the link on the title.
+#    abstract:  Optional (Markdown and $$math$$ allowed); shown in a toggle
+#    bibtex:    Optional; shown in a toggle
+#
+# =====================================================================
+
+- title: "Semantic Distractor Robustness in LLMs: Exploring the Underlying Mechanisms"
+  authors: ["Xiangyu Wong", "Eugene J. Yu", "Chenhao Xiong", "Zheng Li", "Yifan Song", "Sujian Li"]
+  venue: Conference on Empirical Methods in Natural Language Processing (EMNLP)
+  year: 2026
+  selected: true
+  # links: add Paper / arXiv / Code here once available
+
+- title: "FormAct: Agentic Source Editing for Rich-Format Document Generation"
+  authors: ["Eugene J. Yu", "Xingxing Zhang", "Yuan Xia", "Tao Ge", "Xun Wang", "Fnu Kartik",
+            "Vishwas Suryanarayanan", "Cheng Yang", "Amanda Jiang", "Jiayu Ding", "Xiangyu Wong",
+            "Tengchao Lv", "Lei Cui", "Si-Qing Chen", "Furu Wei", "Sujian Li"]
+  venue: International Conference on Machine Learning (ICML)
+  year: 2026
+  selected: true
+  links:
+    OpenReview: https://openreview.net/forum?id=n7Ta0YEcgw
+
+- title: Hierarchical Memory Organization for Wikipedia Generation
+  authors: ["Eugene J. Yu", "Dawei Zhu", "Yifan Song", "Xiangyu Wong", "Jiebin Zhang", "Wenxuan Shi",
+            "Xiaoguang Li", "Qun Liu", "Sujian Li"]
+  venue: Annual Meeting of the Association for Computational Linguistics (ACL)
+  year: 2025
+  selected: true
+  links:
+    Paper: https://aclanthology.org/2025.acl-long.1423/
+    arXiv: https://arxiv.org/abs/2506.23393
+  # bibtex: |
+  #   @inproceedings{yu-etal-2025-hierarchical,
+  #       title = "Hierarchical Memory Organization for {W}ikipedia Generation",
+  #       author = "Yu, Eugene J. and Zhu, Dawei and Song, Yifan and Wong, Xiangyu and Zhang, Jiebin and Shi, Wenxuan and Li, Xiaoguang and Liu, Qun and Li, Sujian",
+  #       booktitle = "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+  #       month = jul,
+  #       year = "2025",
+  #       address = "Vienna, Austria",
+  #       publisher = "Association for Computational Linguistics",
+  #       url = "https://aclanthology.org/2025.acl-long.1423/",
+  #       doi = "10.18653/v1/2025.acl-long.1423",
+  #       pages = "29404--29427"
+  #   }
+
+- title: "LongAttn: Selecting Long-context Training Data via Token-level Attention"
+  authors: ["Longyun Wu", "Dawei Zhu", "Guangxiang Zhao", "Zhuocheng Yu", "Junfeng Ran", "Xiangyu Wong",
+            "Lin Sun", "Sujian Li"]
+  venue: Findings of the Association for Computational Linguistics (ACL Findings)
+  year: 2025
+  selected: true
+  links:
+    Paper: https://aclanthology.org/2025.findings-acl.991/
+    arXiv: https://arxiv.org/abs/2502.16860
+  # bibtex: |
+  #   @inproceedings{wu-etal-2025-longattn,
+  #       title = "{L}ong{A}ttn: Selecting Long-context Training Data via Token-level Attention",
+  #       author = "Wu, Longyun and Zhu, Dawei and Zhao, Guangxiang and Yu, Zhuocheng and Ran, Junfeng and Wong, Xiangyu and Sun, Lin and Li, Sujian",
+  #       booktitle = "Findings of the Association for Computational Linguistics: ACL 2025",
+  #       month = jul,
+  #       year = "2025",
+  #       address = "Vienna, Austria",
+  #       publisher = "Association for Computational Linguistics",
+  #       url = "https://aclanthology.org/2025.findings-acl.991/",
+  #       doi = "10.18653/v1/2025.findings-acl.991",
+  #       pages = "19367--19380"
+  #   }

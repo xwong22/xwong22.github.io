@@ -1,0 +1,20 @@
+---
+title: Publications
+permalink: /publications/
+---
+
+<!-- Everything below is generated from _data/publications.yml. Edit that file, not this one. -->
+
+<!-- <p class="page-lead">
+  See also my <a href="{{ site.author.links | where: "label", "Google Scholar" | map: "url" | first }}">Google Scholar</a> profile.
+</p> -->
+
+{% assign by_year = site.data.publications | group_by: "year" | sort: "name" | reverse %}
+{% for group in by_year %}
+<h2 class="year-heading">{{ group.name }}</h2>
+<ol class="pubs">
+  {%- for pub in group.items %}
+  {% include publication.html pub=pub %}
+  {%- endfor %}
+</ol>
+{% endfor %}

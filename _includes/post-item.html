@@ -1,0 +1,13 @@
+{%- assign p = include.post -%}
+{%- assign href = p.external_url | default: p.url -%}
+<li class="post-item">
+  <time class="post-item-date" datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: "%b %-d, %Y" }}</time>
+  <div class="post-item-main">
+    <a class="post-item-title" href="{{ href | relative_url }}">{{ p.title }}</a>
+    {%- if p.external_url %}<span class="badge">{{ p.original_source | default: "External" }} &nearr;</span>
+    {%- elsif p.original_url %}<span class="badge">{{ p.original_source | default: "Substack" }}</span>{% endif %}
+    {%- if p.description %}
+    <p class="post-item-desc">{{ p.description }}</p>
+    {%- endif %}
+  </div>
+</li>

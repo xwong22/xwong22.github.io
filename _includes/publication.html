@@ -1,0 +1,32 @@
+{%- assign p = include.pub -%}
+{%- assign pid = p.title | slugify | truncate: 40, "" -%}
+<li class="pub">
+  <div class="pub-title">
+    {%- assign main_link = p.links.first[1] %}
+    {%- if main_link %}<a href="{{ main_link | relative_url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}
+  </div>
+  <div class="pub-authors">
+    {%- for au in p.authors %}
+      {%- assign bare = au | remove: "*" | remove: "†" | strip %}
+      {%- if site.author.pub_names contains bare %}<span class="me">{{ au }}</span>{% else %}{{ au }}{% endif %}
+      {%- unless forloop.last %}, {% endunless %}
+    {%- endfor %}
+  </div>
+  <div class="pub-venue">
+    {%- if p.venue %}<em>{{ p.venue }}</em>{% endif %}{% if p.year %}, {{ p.year }}{% endif %}
+    {%- if p.note %} <span class="pub-note">{{ p.note }}</span>{% endif %}
+  </div>
+  {%- if p.links or p.abstract or p.bibtex %}
+  <div class="pub-links">
+    {%- for l in p.links %}<a href="{{ l[1] | relative_url }}">{{ l[0] }}</a>{% endfor %}
+    {%- if p.abstract %}<button type="button" class="pub-toggle" aria-expanded="false" aria-controls="abs-{{ pid }}">Abstract</button>{% endif %}
+    {%- if p.bibtex %}<button type="button" class="pub-toggle" aria-expanded="false" aria-controls="bib-{{ pid }}">BibTeX</button>{% endif %}
+  </div>
+  {%- if p.abstract %}
+  <div class="pub-extra" id="abs-{{ pid }}" hidden>{{ p.abstract | markdownify }}</div>
+  {%- endif %}
+  {%- if p.bibtex %}
+  <pre class="pub-extra pub-bibtex" id="bib-{{ pid }}" hidden><code>{{ p.bibtex | strip | escape }}</code></pre>
+  {%- endif %}
+  {%- endif %}
+</li>

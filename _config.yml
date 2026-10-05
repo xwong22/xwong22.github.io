@@ -1,0 +1,93 @@
+# =====================================================================
+#  Site settings — edit this block first.
+#  (Changes to _config.yml need a restart of `jekyll serve` locally.)
+# =====================================================================
+
+title: Xiangyu Wong
+description: >-
+  Researcher in artificial intelligence. Personal website, publications and blog.
+url: "https://xwong22.github.io"   # your GitHub Pages domain, no trailing slash
+baseurl: ""                              # "" for username.github.io; "/repo-name" for a project site
+lang: en
+
+author:
+  name: Xiangyu Wong
+  # Spellings of your name as they appear in author lists; these get highlighted
+  # in bold on the publications page.
+  pub_names: ["Xiangyu Wong", "X. Wong"]
+  # position: Master's Student in Computer Science
+  # affiliation: Peking University
+  # affiliation_url: https://www.example.edu
+  avatar: /assets/img/profile_pic.jpeg         # replace with e.g. /assets/img/profile.jpg
+  email: wongxiangyu22@gmail.com
+  # Shown under your photo on the home page. Delete a line or leave url empty to hide it.
+  links:
+    - { label: Email,          url: "mailto:wongxiangyu22@gmail.com" }
+    - { label: Google Scholar, url: "https://scholar.google.com/citations?user=n9HU6WoAAAAJ" }
+    - { label: LinkedIn      , url: "https://www.linkedin.com/in/xiangyu-wong/" }
+    # - { label: GitHub,         url: "https://github.com/xwong22" }
+    # - { label: X / Twitter,    url: "" }
+    # - { label: Substack,       url: "" }
+    # - { label: CV,             url: "/cv/" }
+
+# Show the blog (nav link, home-page section, RSS link). Set to true once you have posts.
+# Restart `jekyll serve` after changing this.
+blog: false
+
+# Top navigation bar
+nav:
+  - { title: About,        url: / }
+  - { title: Publications, url: /publications/ }
+  - { title: Blog,         url: /blog/ }
+  - { title: CV,           url: /cv/ }
+
+# Path to your CV PDF (put the file in assets/files/). Leave empty to hide the download button.
+cv_pdf: ""   # e.g. /assets/files/cv.pdf
+
+# How many news items to show on the home page
+news_limit: 8
+
+# =====================================================================
+#  Build settings — you normally don't need to touch anything below.
+# =====================================================================
+
+permalink: /blog/:year/:title/
+timezone: America/New_York
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  math_engine: mathjax        # emits \( \) / \[ \] which KaTeX then renders
+  syntax_highlighter: rouge
+  footnote_backlink: "&#8617;&#xFE0E;"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope: { path: "", type: posts }
+    values:
+      layout: post
+      math: true
+  - scope: { path: "" }
+    values:
+      layout: page
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - scripts/
+  - references/
+  - archive/        # parked posts; move a file to _posts/ to publish it
+  - vendor/
+  - .bundle/
+  - .jekyll-cache/
+  - node_modules/
