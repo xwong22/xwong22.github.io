@@ -23,6 +23,7 @@
   year: 2026
   selected: true
   links:
+    OpenReview: https://openreview.net/forum?id=HP9abKq3GW
     Code: https://github.com/xwong22/semantic-distractor
   # links: add Paper / arXiv / Code here once available
 
